@@ -1,0 +1,63 @@
+{
+  "name": "@dataxapi/mcp",
+  "version": "0.1.0",
+  "description": "DataXAPI's MCP server on stdio for Claude Desktop, Cursor, Cherry Studio, Cline and other local MCP clients: public data from Douyin, Xiaohongshu (RedNote), WeChat Official Accounts and Channels, Weibo, Bilibili, Zhihu, Kuaishou, TikTok, X, YouTube and more. Paid per call, errors are not charged. Forwards to https://api.dataxapi.com/mcp.",
+  "type": "module",
+  "bin": {
+    "dataxapi-mcp": "./src/bin.js"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "mcpName": "com.dataxapi/mcp",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "dataxapi",
+    "douyin",
+    "xiaohongshu",
+    "rednote",
+    "wechat",
+    "weixin",
+    "wechat-official-account",
+    "wechat-channels",
+    "weibo",
+    "bilibili",
+    "zhihu",
+    "kuaishou",
+    "tiktok",
+    "social-media-api",
+    "抖音",
+    "小红书",
+    "公众号",
+    "视频号"
+  ],
+  "author": {
+    "name": "DataXAPI",
+    "email": "support@dataxapi.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/data-x-api/dataxapi-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/data-x-api/dataxapi-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/data-x-api/dataxapi-mcp/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

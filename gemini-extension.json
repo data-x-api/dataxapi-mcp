@@ -1,0 +1,11 @@
+{
+  "name": "dataxapi",
+  "version": "0.1.0",
+  "description": "Public data from Douyin, Xiaohongshu, WeChat, Weibo, Bilibili, Zhihu, Kuaishou, TikTok, X, YouTube and more. Paid per call, errors are not charged. Set DATAXAPI_API_KEY; find and describe work without it.",
+  "mcpServers": {
+    "dataxapi": {
+      "command": "npx",
+      "args": ["-y", "@dataxapi/mcp"]
+    }
+  }
+}

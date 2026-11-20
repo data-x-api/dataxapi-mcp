@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dataxapi-mcp"
+version = "0.1.0"
+description = "DataXAPI's MCP server on stdio: public data from Douyin, Xiaohongshu (RedNote), WeChat Official Accounts and Channels, Weibo, Bilibili, Zhihu, Kuaishou, TikTok, X, YouTube and more for Claude, Cursor and any MCP client. 抖音、小红书、公众号、视频号数据 MCP. Paid per call, errors are not charged."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "DataXAPI", email = "support@dataxapi.com" }]
+keywords = ["mcp", "mcp-server", "dataxapi", "douyin", "xiaohongshu", "rednote", "wechat", "weibo", "bilibili", "zhihu", "tiktok", "social-media-api", "抖音", "小红书", "公众号"]
+classifiers = ["Programming Language :: Python :: 3", "Operating System :: OS Independent", "Topic :: Internet"]
+dependencies = ["mcp>=1.9,<2", "anyio>=4"]
+
+[project.urls]
+Homepage = "https://dataxapi.com/?ref=pypi-dataxapi-mcp"
+Source = "https://github.com/data-x-api/dataxapi-mcp"
+Documentation = "https://dataxapi.com/mcp/"
+
+[project.scripts]
+dataxapi-mcp = "dataxapi_mcp:main"
