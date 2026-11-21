@@ -29,7 +29,7 @@ claude mcp add --transport http --scope user dataxapi https://api.dataxapi.com/m
   "mcpServers": {
     "dataxapi": {
       "command": "npx",
-      "args": ["-y", "github:data-x-api/dataxapi-mcp"],
+      "args": ["-y", "@dataxapi/mcp"],
       "env": { "DATAXAPI_API_KEY": "dx_..." }
     }
   }
@@ -38,7 +38,7 @@ claude mcp add --transport http --scope user dataxapi https://api.dataxapi.com/m
 
 Python instead of Node: `"command": "uvx", "args": ["--from", "git+https://github.com/data-x-api/dataxapi-mcp#subdirectory=python", "dataxapi-mcp"]`.
 
-The npm and PyPI packages are not out yet; until they are, these commands run the same code straight from this repository.
+The PyPI package is not out yet; until it is, the Python command runs the same code straight from this repository.
 
 That block goes in:
 
@@ -51,7 +51,7 @@ That block goes in:
 | Windsurf | `~/.codeium/windsurf/mcp_config.json` |
 | VS Code | `.vscode/mcp.json`, under `"servers"` |
 | Gemini CLI | `gemini extensions install https://github.com/data-x-api/dataxapi-mcp` |
-| Codex | `~/.codex/config.toml`: `[mcp_servers.dataxapi]` with `command = "npx"`, `args = ["-y", "github:data-x-api/dataxapi-mcp"]`, `env = { DATAXAPI_API_KEY = "dx_..." }` |
+| Codex | `~/.codex/config.toml`: `[mcp_servers.dataxapi]` with `command = "npx"`, `args = ["-y", "@dataxapi/mcp"]`, `env = { DATAXAPI_API_KEY = "dx_..." }` |
 
 Get a key: <https://dataxapi.com/console/keys/?ref=dataxapi-mcp>. Without one, `find`, `describe` and `account` status still work; a paid call answers with how to add a key, and nothing is charged.
 
@@ -84,7 +84,7 @@ Every endpoint and its price: <https://dataxapi.com/apis/>. Recorded answers and
 - **按次付费，出错不收费。**每次结果写明扣了多少、还剩多少。`find`、`describe`、`account` 免费，前两个不用 Key。
 - **免费试用，最多 333 次，不用绑卡。**最低充 $10，余额不过期；支付宝、微信支付、银行卡都能付。
 
-能直接连远程地址的客户端，用 `https://api.dataxapi.com/mcp` 加 `Authorization: Bearer <你的 Key>` 就行，不用装任何东西。只能启动本地服务的客户端，把上面那段 `mcpServers` 配置贴进去（Node 用 `npx -y github:data-x-api/dataxapi-mcp`，Python 用 `uvx --from "git+https://github.com/data-x-api/dataxapi-mcp#subdirectory=python" dataxapi-mcp`；npm 和 PyPI 包还没发布，发布前这两条直接从本仓库运行同一份代码）。
+能直接连远程地址的客户端，用 `https://api.dataxapi.com/mcp` 加 `Authorization: Bearer <你的 Key>` 就行，不用装任何东西。只能启动本地服务的客户端，把上面那段 `mcpServers` 配置贴进去（Node 用 `npx -y @dataxapi/mcp`，Python 用 `uvx --from "git+https://github.com/data-x-api/dataxapi-mcp#subdirectory=python" dataxapi-mcp`；PyPI 包还没发布，发布前 Python 这条直接从本仓库运行同一份代码）。
 
 拿 Key：<https://dataxapi.com/zh/console/keys/?ref=dataxapi-mcp>。全部接口和价格：<https://dataxapi.com/zh/apis/>。
 
