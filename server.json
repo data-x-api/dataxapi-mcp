@@ -2,17 +2,61 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.dataxapi/mcp",
   "title": "DataXAPI",
-  "description": "Public data from Douyin, Xiaohongshu, WeChat, Weibo, Bilibili, Zhihu, TikTok, X, YouTube and more. Paid per call.",
-  "version": "0.1.0",
+  "description": "Market data for AI agents: WeChat, Xiaohongshu, Douyin, TikTok, X and 16 more. Pay per call.",
+  "version": "1.1.0",
   "websiteUrl": "https://dataxapi.com/mcp/",
-  "repository": { "url": "https://github.com/data-x-api/dataxapi-mcp", "source": "github" },
-  "remotes": [
-    { "type": "streamable-http", "url": "https://api.dataxapi.com/mcp", "headers": [{ "name": "Authorization", "description": "Bearer <your DataXAPI key>; find and describe work without one", "isRequired": false, "isSecret": true }] }
+  "icons": [
+    {
+      "src": "https://dataxapi.com/logo.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
   ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.dataxapi.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Your DataXAPI API key as a bearer token (make one at https://dataxapi.com/console/keys/). Not needed by clients that sign in by OAuth; find and describe work without it.",
+          "isRequired": false,
+          "isSecret": true,
+          "value": "Bearer {api_key}",
+          "variables": {
+            "api_key": {
+              "description": "DataXAPI API key, starts with dx_",
+              "isRequired": true,
+              "isSecret": true,
+              "placeholder": "dx_..."
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/data-x-api/dataxapi-mcp",
+    "source": "github"
+  },
   "packages": [
-    { "registryType": "npm", "identifier": "@dataxapi/mcp", "version": "0.1.0", "transport": { "type": "stdio" },
-      "environmentVariables": [{ "name": "DATAXAPI_API_KEY", "description": "Your DataXAPI key (dx_...); find and describe work without one", "isRequired": false, "isSecret": true }] },
-    { "registryType": "pypi", "identifier": "dataxapi-mcp", "version": "0.1.0", "transport": { "type": "stdio" },
-      "environmentVariables": [{ "name": "DATAXAPI_API_KEY", "description": "Your DataXAPI key (dx_...); find and describe work without one", "isRequired": false, "isSecret": true }] }
+    {
+      "registryType": "npm",
+      "identifier": "@dataxapi/mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "DATAXAPI_API_KEY",
+          "description": "Your DataXAPI key (dx_...); find, describe and account status work without one",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
   ]
 }
