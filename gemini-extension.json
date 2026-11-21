@@ -5,7 +5,7 @@
   "mcpServers": {
     "dataxapi": {
       "command": "npx",
-      "args": ["-y", "@dataxapi/mcp"]
+      "args": ["-y", "github:data-x-api/dataxapi-mcp"]
     }
   }
 }

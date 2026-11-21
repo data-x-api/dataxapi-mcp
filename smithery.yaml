@@ -8,4 +8,4 @@ startCommand:
         type: string
         description: "Your DataXAPI key (dx_...). find and describe work without one. Free trial: up to 333 calls, no card: https://dataxapi.com/console/keys/?ref=smithery"
   commandFunction: |-
-    (config) => ({ command: 'npx', args: ['-y', '@dataxapi/mcp'], env: config.apiKey ? { DATAXAPI_API_KEY: config.apiKey } : {} })
+    (config) => ({ command: 'npx', args: ['-y', 'github:data-x-api/dataxapi-mcp'], env: config.apiKey ? { DATAXAPI_API_KEY: config.apiKey } : {} })

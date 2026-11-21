@@ -12,7 +12,7 @@ Your MCP client starts it; it forwards every request to ${DEFAULT_MCP_URL}.
   DATAXAPI_API_KEY   your key (dx_...); find, describe and account status work without one
 
 Claude Desktop, Cursor, Cherry Studio and most clients:
-  { "mcpServers": { "dataxapi": { "command": "npx", "args": ["-y", "@dataxapi/mcp"], "env": { "DATAXAPI_API_KEY": "dx_..." } } } }
+  { "mcpServers": { "dataxapi": { "command": "npx", "args": ["-y", "github:data-x-api/dataxapi-mcp"], "env": { "DATAXAPI_API_KEY": "dx_..." } } } }
 
 Docs: https://dataxapi.com/mcp/  ·  中文：https://dataxapi.com/zh/mcp/
 `;
