@@ -3,7 +3,7 @@
   "name": "com.dataxapi/mcp",
   "title": "DataXAPI",
   "description": "Market data for AI agents: WeChat, Xiaohongshu, Douyin, TikTok, X and 16 more. Pay per call.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "websiteUrl": "https://dataxapi.com/mcp/",
   "icons": [
     {
@@ -45,6 +45,22 @@
     {
       "registryType": "npm",
       "identifier": "@dataxapi/mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "DATAXAPI_API_KEY",
+          "description": "Your DataXAPI key (dx_...); find, describe and account status work without one",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    },
+    {
+      "registryType": "pypi",
+      "identifier": "dataxapi-mcp",
       "version": "0.1.0",
       "transport": {
         "type": "stdio"
