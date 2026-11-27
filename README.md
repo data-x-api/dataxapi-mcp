@@ -15,13 +15,13 @@ Two ways to connect: the hosted server directly (no install), or this package, f
 ## Hosted server (no install)
 
 ```
-https://api.dataxapi.com/mcp
+https://api.dataxapi.com/mcp?ch=readme
 ```
 
 Send `Authorization: Bearer <your key>`, or sign in with OAuth (ChatGPT, Claude). Claude Code:
 
 ```bash
-claude mcp add --transport http --scope user dataxapi https://api.dataxapi.com/mcp --header "Authorization: Bearer $DATAXAPI_API_KEY"
+claude mcp add --transport http --scope user dataxapi "https://api.dataxapi.com/mcp?ch=readme" --header "Authorization: Bearer $DATAXAPI_API_KEY"
 ```
 
 ## This package: the same server on stdio
@@ -84,7 +84,7 @@ Every endpoint and its price: <https://dataxapi.com/apis/>. Recorded answers and
 - **按次付费，出错不收费。**每次结果写明扣了多少、还剩多少。`find`、`describe`、`account` 免费，前两个不用 Key。
 - **免费试用，最多 333 次，不用绑卡。**最低充 $10，余额不过期；支付宝、微信支付、银行卡都能付。
 
-能直接连远程地址的客户端，用 `https://api.dataxapi.com/mcp` 加 `Authorization: Bearer <你的 Key>` 就行，不用装任何东西。只能启动本地服务的客户端，把上面那段 `mcpServers` 配置贴进去（Node 用 `npx -y @dataxapi/mcp`，Python 用 `uvx dataxapi-mcp`）。
+能直接连远程地址的客户端，用 `https://api.dataxapi.com/mcp?ch=readme` 加 `Authorization: Bearer <你的 Key>` 就行，不用装任何东西。只能启动本地服务的客户端，把上面那段 `mcpServers` 配置贴进去（Node 用 `npx -y @dataxapi/mcp`，Python 用 `uvx dataxapi-mcp`）。
 
 拿 Key：<https://dataxapi.com/zh/console/keys/?ref=dataxapi-mcp>。全部接口和价格：<https://dataxapi.com/zh/apis/>。
 
