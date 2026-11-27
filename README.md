@@ -6,7 +6,7 @@ Public data from Douyin, Xiaohongshu (RedNote), WeChat Official Accounts and Cha
 - **Pay per call, errors are not charged.** Every result states what it cost and the balance left. `find`, `describe` and `account` are free, and `find` and `describe` need no key, so an agent can check whether the data exists and what it costs before anyone signs up.
 - **Free trial: up to 333 calls, no card.** Top up from $10; the balance does not expire.
 
-Also listed on Glama: [DataXAPI MCP connector](https://glama.ai/mcp/connectors/com.dataxapi/mcp).
+Also listed on Glama: [this server](https://glama.ai/mcp/servers/data-x-api/dataxapi-mcp) and the [hosted connector](https://glama.ai/mcp/connectors/com.dataxapi/mcp).
 
 Two ways to connect: the hosted server directly (no install), or this package, for clients that only start local servers.
 
